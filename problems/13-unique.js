@@ -14,9 +14,14 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 
 */
 
-let unique = function(array) {
-    // Your code here
-};
+function unique(arr) {
+    return arr.reduce((acc, current) => {
+        if (!acc.includes(current)) {
+            acc.push(current);
+        }
+        return acc;
+    }, []);
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
@@ -24,4 +29,4 @@ try {
     module.exports = unique;
 } catch (e) {
     module.exports = null;
-}
+}
